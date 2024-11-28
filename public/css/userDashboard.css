@@ -1,0 +1,22 @@
+.content{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+
+.show-more-btn {
+    /* background-color: #007bff; */
+    color: rgb(5, 115, 205);
+    border: none;
+    padding: 5px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+
+  }
+
+  .show-more-btn:hover {
+    font-weight: 700;
+  }

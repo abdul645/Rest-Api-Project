@@ -8,21 +8,22 @@
                     <% data.forEach((item)=>{ %>
                         <div class="card m-1" style="width: 16rem; height: 24rem; box-shadow: 0 0 20px gray;">
                             <a href="/productDetail/<%= item._id %>" style=" text-decoration: none;">
-                                <img src="/uploads/<%= item.File %>" style="width: 100%; object-fit: contain; height: 200px;" class="card-img-top  px-3" alt="<%= item.file %>">
+                                <img src="/uploads/<%= item.File %>" style="width: 100%; object-fit: contain; height: 150px;" class="card-img-top  px-3" alt="<%= item.file %>">
                             </a>
                             <div class="card-body py-1">
                                 <a href="/productDetail/<%= item._id %>"  style=" text-decoration: none;">
-                                    <h5 class="card-title ">
+                                    <h5 class="card-title fs-6">
                                         <%= item.Title %>
                                     </h5>
                                 </a>
-                                <p class="card-text mb-1">
+                                <p class="card-text mb-1 fw-bold mb-2" style="font-size: 0.70rem;">
                                     <%= item.Category %>
                                 </p>
-                                <p class="card-text mb-1">
+                                <p class="card-text mb-1" id="content">
                                     <%= item.Description %>
+                                    <a href="/productDetail/<%= item._id %>"><span class="show-more-btn">Show more..</span></a>
                                 </p>
-                                <h5 class="card-title my-2 fs-4">
+                                <h5 class="card-title my-2 fs-6 mb-3">
                                     Price : ₹ <%= item.Price %>
                                 </h5>
                                 <a href="#" class="btn btn-primary w-100">Add To Cart</a>
