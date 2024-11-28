@@ -4,8 +4,7 @@ const ConnectDB = async (DATABASE_URL) =>{
     try {
         const DB_OPTIONS = {
             dbName: "ProductDetail",  
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
+            serverSelectionTimeoutMS: 20000, 
         }
         await mongoose.connect(DATABASE_URL, DB_OPTIONS);
         console.log("DB Connected Successfully.....");
